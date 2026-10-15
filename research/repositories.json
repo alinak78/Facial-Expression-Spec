@@ -1,0 +1,42 @@
+[
+  {
+    "name": "EmotiEffLib",
+    "url": "https://github.com/sb-ai-lab/EmotiEffLib.git",
+    "commit": "520a051c64cd191521e5934655314e769a319684",
+    "path": "/Users/alina/Desktop/sab/spec-2026/Facial-Expression-Spec/repos/EmotiEffLib",
+    "status": "cloned",
+    "checked_date": "2026-10-15"
+  },
+  {
+    "name": "Emotrics",
+    "url": "https://github.com/dguari1/Emotrics.git",
+    "commit": "efba28875f8f2340dfa8e1bc8ff65af8a88049e8",
+    "path": "/Users/alina/Desktop/sab/spec-2026/Facial-Expression-Spec/repos/Emotrics",
+    "status": "cloned",
+    "checked_date": "2026-10-15"
+  },
+  {
+    "name": "Facial-Expression-Spec",
+    "url": "https://github.com/alinak78/Facial-Expression-Spec.git",
+    "commit": "502df966cd506c73175a38fcb21ca4a5b9449a18",
+    "path": "/Users/alina/Desktop/sab/spec-2026/Facial-Expression-Spec",
+    "status": "cloned",
+    "checked_date": "2026-10-15"
+  },
+  {
+    "name": "OpenFace",
+    "url": "https://github.com/TadasBaltrusaitis/OpenFace.git",
+    "commit": "3d4b5cf8d96138be42bed229447f36cbb09a5a29",
+    "path": "/Users/alina/Desktop/sab/spec-2026/Facial-Expression-Spec/repos/OpenFace",
+    "status": "cloned",
+    "checked_date": "2026-10-15"
+  },
+  {
+    "name": "YouTube-Facial-Palsy-Database",
+    "url": "https://github.com/AvLab-CV/YouTube-Facial-Palsy-Database.git",
+    "commit": "5f1197b972e16b87cf2ca92a81ace870ff74c932",
+    "path": "/Users/alina/Desktop/sab/spec-2026/Facial-Expression-Spec/repos/YouTube-Facial-Palsy-Database",
+    "status": "cloned",
+    "checked_date": "2026-10-15"
+  }
+]

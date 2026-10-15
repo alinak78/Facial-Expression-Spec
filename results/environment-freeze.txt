@@ -1,0 +1,11 @@
+emotiefflib @ file:///Users/alina/Desktop/sab/spec-2026/repos/EmotiEffLib
+flatbuffers==25.12.19
+ml_dtypes==0.6.0
+numpy==2.2.6
+onnx==1.23.2
+onnxruntime==1.31.0
+opencv-python==4.12.0.88
+packaging==26.3
+pillow==12.3.0
+protobuf==7.36.2
+typing_extensions==4.16.0

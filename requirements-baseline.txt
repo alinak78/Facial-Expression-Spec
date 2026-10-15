@@ -1,0 +1,3 @@
+# Upstream ONNX baseline; keep OpenCV 4 for the Haar cascade API used by our runner.
+./repos/EmotiEffLib
+opencv-python==4.12.0.88

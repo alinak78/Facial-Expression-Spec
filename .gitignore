@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.DS_Store
+repos/
+data/raw/
+.codex-finalizer/
+.codex-presentation-build/

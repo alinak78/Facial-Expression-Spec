@@ -1,0 +1,64 @@
+{
+  "input": "/Users/alina/Desktop/sab/spec-2026/Facial-Expression-Spec/repos/OpenFace/samples/default.wmv",
+  "input_sha256": "b6c4879cbe14f85412d33be9c0854d3920aacc26f90115868c94e40f836a316c",
+  "model": "enet_b0_8_best_vgaf",
+  "model_sha256": "fa07e841fd06c7a67ee651ea4e6e4a3a2bb5695f47b37a7da50492526f59c898",
+  "model_repository_commit": "520a051c64cd191521e5934655314e769a319684",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "detector": "OpenCV frontal-face Haar cascade",
+  "sampled_frames": 2,
+  "frames_with_faces": 2,
+  "interpretation": "Expression predictions only. Softmax scores are uncalibrated. No emotion ground truth or disability diagnosis is inferred.",
+  "records": [
+    {
+      "frame_index": 0,
+      "timestamp_seconds": 0.0,
+      "faces": [
+        {
+          "bbox_xywh": [
+            117,
+            112,
+            247,
+            247
+          ],
+          "predicted_expression": "Neutral",
+          "softmax_scores": {
+            "Anger": 0.08224394172430038,
+            "Contempt": 0.06570591777563095,
+            "Disgust": 0.007734627928584814,
+            "Fear": 0.016581324860453606,
+            "Happiness": 0.031325582414865494,
+            "Neutral": 0.5661638975143433,
+            "Sadness": 0.025702327489852905,
+            "Surprise": 0.2045423686504364
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 25,
+      "timestamp_seconds": 1.6666666666666667,
+      "faces": [
+        {
+          "bbox_xywh": [
+            123,
+            121,
+            246,
+            246
+          ],
+          "predicted_expression": "Neutral",
+          "softmax_scores": {
+            "Anger": 0.056426312774419785,
+            "Contempt": 0.08396314084529877,
+            "Disgust": 0.0055152978748083115,
+            "Fear": 0.008506976999342442,
+            "Happiness": 0.02109541930258274,
+            "Neutral": 0.6698653101921082,
+            "Sadness": 0.029913220554590225,
+            "Surprise": 0.12471441924571991
+          }
+        }
+      ]
+    }
+  ]
+}

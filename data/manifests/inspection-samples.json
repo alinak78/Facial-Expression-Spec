@@ -1,0 +1,19 @@
+[
+  {
+    "dataset": "ravdess",
+    "archive": "data/raw/ravdess/archives/Video_Speech_Actor_05.zip",
+    "archive_member": "Actor_05/01-01-01-01-01-01-05.mp4",
+    "sample": "data/raw/ravdess/samples/01-01-01-01-01-01-05.mp4",
+    "sha256": "150fd212676fd757237a1ff4291b4fd9eed6315a171e279d716c7634418093d8"
+  },
+  {
+    "dataset": "torgo",
+    "archive": "data/raw/torgo/archives/F.tar.bz2",
+    "archive_member": "F01/Session1/wav_headMic/0064.wav",
+    "sample": "data/raw/torgo/samples/0064.wav",
+    "sha256": "4d30720fc77b3bf4ebb2d415cff6b1f463182dc5a12853667e960a943db80f6a",
+    "sample_rate": 16000,
+    "channels": 1,
+    "duration_seconds": 1.53425
+  }
+]

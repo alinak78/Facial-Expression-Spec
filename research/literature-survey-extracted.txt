@@ -1,0 +1,285 @@
+Literature Survey on Facial Expression Recognition in People with Disabilities
+Abstract
+This Google Doc surveys research on facial expression recognition for people with disabilities, including autism, facial palsy, intellectual disabilities, and blind or low-vision users. It summarizes key papers, datasets, methods, code availability, results, and limitations, showing that standard FER models often fail because disabled people’s facial movements may differ from typical training data. Potential research opportunity is to build personalized, interpretable, privacy-aware systems that focus on facial movement and accessibility rather than making overconfident emotion predictions.
+1 Introduction
+Facial expression recognition is used to detect face movements and often classify them into emotions such as happiness, sadness, anger, fear, surprise, or disgust. However, this approach does not always work well for people with disabilities, because their facial movements may be different from the examples used to train most models.
+For example, people with facial palsy, stroke, cerebral palsy, or other motor conditions may have facial movements that are asymmetric, reduced, or delayed. Autistic people and people with intellectual disabilities may also express emotions in ways that differ from typical training data. For blind and low-vision users, facial expression recognition may be useful as an assistive tool to understand other people’s nonverbal cues.
+Because of these differences, facial expression recognition in disability contexts should not be treated as a simple emotion-classification task. It should focus on sensing facial movements, supporting accessibility, and interpreting results carefully without assuming that a facial expression always directly represents a person’s true emotional state.
+The most successful and relevant studies are:
+Rudovic et al., 2018 is one of the strongest studies because it uses personalized machine learning for autistic children instead of assuming one model works for everyone. It showed that personalized models performed better than general models when estimating affect and engagement during robot-assisted autism therapy.arXiv: https://arxiv.org/abs/1802.01186
+Bangerter et al., 2020 is important because it studied a large autism sample and showed that autistic people do not all express emotions the same way. The study found both under-responsive and over-responsive subgroups, which highlights why personalization matters.Paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC7212683/
+Greene et al., 2020 is especially useful for facial palsy research because it showed that standard emotion recognition tools can misread facial palsy as reduced joy or increased negative emotion. This is a strong example of why disability-specific FER research is needed.Paper: https://pubmed.ncbi.nlm.nih.gov/31021433/
+Ge et al., 2022 is a strong technical paper because it uses facial action units to estimate facial paralysis severity. This is useful because it focuses on measurable facial movements instead of directly guessing emotions.arXiv: https://arxiv.org/abs/2203.01800
+Gaya-Morey et al., 2026 is one of the clearest studies showing that regular facial expression recognition models do not generalize well to people with intellectual disabilities. It found that models trained on standard datasets performed poorly on disability-specific data.arXiv: https://arxiv.org/abs/2401.11877
+2 Key Research Themes
+2.1 Facial Expression Recognition as Assistive Technology
+Early accessibility research explored facial expression recognition as a way to help blind and low vision users access nonverbal social cues. Astler et al. proposed a system using facial and expression recognition to communicate facial expressions and identities to blind users in real time. Astler et al. ASSETS 2011 Tanveer et al. later developed iFEPS, a sensory substitution system that translated facial expressions into sound for blind users. Their ASSETS 2013 evaluation included 14 participants, including 7 blind users, and found that users could perceive expressions most of the time, with usability rated 4.02 out of 5. Tanveer et al. ASSETS 2013
+These studies show that accessibility evaluation must include usability, learnability, cognitive load, social appropriateness, and user control, not only model accuracy.
+2.2 Autism and Atypical Expressivity
+Several studies use computer vision to measure facial expression, affect, attention, or engagement in autistic people. Rudovic et al. proposed a personalized machine learning framework for robot perception of affect and engagement in autism therapy. Their model used multimodal data from 35 autistic children and achieved approximately 60 percent agreement with human experts, outperforming non personalized approaches. Rudovic et al. Science Robotics 2018
+Bangerter et al. analyzed spontaneous facial expressions in 124 autistic participants and 41 typically developing participants. Using automated action unit analysis, they found that autistic participants showed lower average positive expression, but subgroup analysis revealed both under responsive and over responsive patterns. Bangerter et al. Molecular Autism 2020
+This is important because it shows that group averages hide meaningful heterogeneity.
+Egger et al. demonstrated the feasibility of smartphone based in home emotion and attention analysis for autism related behavioral sensing. Their ResearchKit study collected data from 1,756 families and 4,441 uploaded videos. Egger et al. npj Digital Medicine 2018
+This work shows the potential for scalable home based sensing, but also highlights privacy and clinical validation challenges.
+2.3 Facial Palsy Paralysis and Clinical Facial Movement Analysis
+Facial palsy research is one of the strongest areas connecting facial expression recognition and disability. Greene et al. introduced the MEEI Facial Palsy Photo and Video Standard Set, containing standardized images and videos across flaccid and nonflaccid facial palsy. Their study showed that automated emotion detection interpreted complete flaccid palsy as reduced joy and moderate palsy as increased negative emotion, such as contempt. Greene et al. The Laryngoscope 2020
+This result is highly relevant because it demonstrates that commercial or standard facial expression recognition tools can misinterpret disability related facial movement as emotional expression.
+Ge et al. proposed ALGRNet, an Adaptive Local Global Relational Network for facial action unit detection and facial paralysis severity estimation. The model used action units as interpretable facial movement features and evaluated performance on BP4D, DISFA, and a medically annotated facial paralysis dataset. Ge et al. arXiv 2022
+This line of work suggests that action unit based analysis may be more appropriate than direct emotion classification for clinical disability contexts.
+2.4 Intellectual Disabilities and Poor Generalization
+Gaya Morey et al. evaluated whether deep learning facial expression recognition models trained on standard facial expression datasets could generalize to people with intellectual disabilities. They tested 12 convolutional neural network models using standard datasets and MuDERI, a dataset containing individuals with intellectual disabilities. Models that performed well on typical datasets performed poorly on MuDERI, often below 50 to 55 percent accuracy. Gaya Morey et al. Multimedia Systems 2026
+This paper is especially important because it directly tests the assumption that mainstream facial expression recognition models can be applied to disabled populations. The results suggest that disability specific and user specific training is necessary.
+3 Representative Studies
+Paper
+Venue
+Population
+Method
+Key Outcome
+Astler et al. 2011
+ACM ASSETS
+Blind and low vision users
+Face and expression recognition for assistive feedback
+Early system for making nonverbal cues accessible
+Tanveer et al. 2013
+ACM ASSETS
+Blind and low vision users
+Facial expression to sound sensory substitution
+Users perceived expressions most of the time usability 4.02 out of 5
+Jaiswal et al. 2017
+IEEE FG
+ADHD and ASD adults
+RGB D expressive behavior analysis
+Reported high diagnostic classification accuracy
+Rudovic et al. 2018
+Science Robotics
+Autistic children
+Personalized multimodal deep learning
+Personalized models outperformed general models
+Egger et al. 2018
+npj Digital Medicine
+Children at autism risk
+Smartphone video and automated emotion and attention coding
+Large scale home sensing was feasible
+Bangerter et al. 2020
+Molecular Autism
+Autistic people
+Automated AU analysis
+Revealed over responsive and under responsive ASD subgroups
+Greene et al. 2020
+The Laryngoscope
+Facial palsy patients
+Clinical scales plus automated emotion detection
+FER misread palsy related movement as altered emotion
+Ge et al. 2022
+arXiv and IEEE TAC submission
+Facial palsy patients
+AU detection with ALGRNet
+AU based models supported paralysis severity estimation
+Gaya Morey et al. 2026
+Multimedia Systems
+Intellectual disabilities
+CNNs plus explainable AI
+Standard FER models generalized poorly
+
+4 Datasets
+Dataset
+Population
+Description
+Limitations
+MEEI Facial Palsy Standard Set
+Facial palsy
+Standardized photos and videos with clinical severity scales
+Small by deep learning standards
+YouTube Facial Palsy Database
+Facial palsy
+32 videos from 21 to 22 patients with clinician labeled regions
+Opportunistic small YouTube derived dataset
+FPara
+Facial palsy
+89 videos labeled with House Brackmann severity
+Not broadly available
+MuDERI
+Intellectual disabilities
+Multimodal dataset with individuals with intellectual disabilities
+Small sample size
+MDCA autism therapy dataset
+Autistic children
+Multimodal therapy data including video audio and physiology
+Private or restricted
+Autism and Beyond
+Children at autism risk
+Smartphone home videos collected through ResearchKit
+Privacy limits raw data sharing
+BP4D and DISFA
+General AU datasets
+Widely used for facial action unit detection
+Not disability specific
+CK plus JAFFE FER2013 AffectNet
+General FER datasets
+Standard emotion recognition datasets
+Often fail in disability contexts
+
+5 Methods Used in Existing Work
+Facial Landmark and Geometry Based Methods
+These methods measure facial regions such as mouth corners, eyebrow height, eye openness, head pose, or facial asymmetry. They are common in early assistive systems and facial palsy assessment.
+Facial Action Unit Detection
+Action units describe specific muscle movements, such as AU6 for cheek raiser and AU12 for lip corner puller. Action unit based methods are more interpretable than direct emotion labels and are useful for analyzing facial palsy, autism heterogeneity, and clinical movement patterns.
+Deep Learning Facial Expression Recognition Models
+Convolutional neural networks and transformer based models are widely used for standard facial expression recognition. However, studies show that models trained on non disabled datasets often perform poorly on disabled populations.
+Personalized and Multimodal Models
+Personalized models combine facial features with user specific information, audio, physiology, head pose, behavioral scores, or clinical context. This approach is especially promising for autism and intellectual disability, where expression patterns vary widely across individuals.
+6 Evaluation Approaches
+Common evaluation metrics include accuracy, F1 score, sensitivity and specificity, AU detection F1 score, AU intensity correlation, intraclass correlation with expert ratings, cross validation, subject exclusive train and test splits, clinical scale correlation, usability studies, and participant feedback.
+For disability related facial expression recognition, subject exclusive evaluation is especially important. Random frame level splits can overestimate performance because the same person’s face may appear in both training and test data.
+7 Code and Repository Availability
+A recurring limitation in this literature is that many disability focused facial expression recognition papers do not release full training code or raw data. This is especially common when the work uses clinical videos, child data, or commercial facial expression recognition systems. The most useful available repositories are often toolkits or datasets rather than exact paper implementations.
+Paper or Resource
+Code or Repository
+Notes
+Astler et al. ASSETS 2011
+No official code repository found
+Paper describes a prototype using face and expression recognition components but no released implementation was found
+Tanveer et al. ASSETS 2013 iFEPS
+No official code repository found
+The paper reports the assistive system and evaluation but no public GitHub repository surfaced
+Jaiswal et al. FG 2017
+No official code repository found
+Paper is available through the University of Nottingham repository but no linked code release was found
+Rudovic et al. Science Robotics 2018 PPA net
+No official GitHub repository found
+Uses Keras and a private multimodal autism therapy dataset no official implementation release was found
+Egger et al. npj Digital Medicine 2018
+Code available by request some components shared via GitHub
+The paper states that code for reproducing tables and building basic app components is available by contacting the authors
+Bangerter et al. Molecular Autism 2020
+No paper specific GitHub found
+Uses FACET CERT style automated facial analysis rather than a released custom model
+Greene et al. MEEI Facial Palsy Standard Set
+Dataset and tool ecosystem available no exact paper code found
+The MEEI dataset is described as open source or available for research related open software includes Emotrics
+Guarin et al. Emotrics
+https://github.com/dguari1/Emotrics
+Python PyQt5 software for automatic facial measurements in unilateral facial paralysis
+YouTube Facial Palsy Database
+https://github.com/AvLab-CV/YouTube-Facial-Palsy-Database
+Public dataset repository with 32 videos from 21 patients sampled at 6 FPS and clinician labeled by palsy region and intensity
+Ge et al. ALGRNet 2022
+No official implementation found
+Papers With Code lists no code implementation for Automatic Facial Paralysis Estimation with Facial Action Units
+OpenFace
+https://github.com/TadasBaltrusaitis/OpenFace
+Open source facial behavior toolkit for landmarks head pose gaze and AU recognition
+Gaya Morey et al. Multimedia Systems 2026
+No official GitHub found
+Paper reports CNN experiments and LIME explainability but no linked implementation was found on the publisher page
+
+8 Paper by Paper Results and Limitations
+8.1 Astler et al. Increased Accessibility to Nonverbal Communication through Facial and Expression Recognition Technologies for Blind Visually Impaired Subjects
+Population  Blind and visually impaired users
+Goal  Make facial expressions and identity cues accessible through real time assistive feedback
+Method  Face recognition plus expression recognition delivered through audio or haptic feedback
+Results  The work presents system design and early user centered motivation rather than a large scale quantitative benchmark
+Limitations  Early stage prototype limited real world evaluation no released code found likely constrained by then current face and expression recognition robustness
+Code  No official repository found
+Source paper or record
+8.2 Tanveer et al. Do You See What I See Designing a Sensory Substitution Device to Access Non Verbal Modes of Communication
+Population  Blind and visually impaired users
+Goal  Translate facial expressions into auditory cues through iFEPS
+Method  Real time facial expression perception through sound developed through participatory design
+Results  Evaluation with 14 participants including 7 blind users and 7 blindfolded users showed that users could perceive facial expressions most of the time subjective usability averaged 4.02 out of 5
+Limitations  Small sample size evaluation likely controlled compared with messy real world conversations no public code found
+Code  No official repository found
+Source paper or record
+8.3 Jaiswal et al. Automatic Detection of ADHD and ASD from Expressive Behaviour in RGBD Data
+Population  Adults with ADHD and or ASD
+Goal  Predict diagnostic groups from expressive behavior
+Method  RGB D sensing facial expression analysis based on dynamic deep learning and 3D behavioral analysis
+Results  Reported 96 percent classification for control vs ADHD ASD condition and 94 percent for comorbid ADHD plus ASD vs ASD only
+Limitations  Diagnostic classification from facial and behavioral data raises strong generalization and ethics questions dataset appears not broadly public no official code found
+Code  No official repository found
+Source paper or record
+8.4 Rudovic et al. Personalized Machine Learning for Robot Perception of Affect and Engagement in Autism Therapy
+Population  Autistic children
+Goal  Estimate affect and engagement during robot assisted autism therapy
+Method  Personalized Perception of Affect Network using multimodal audio video and autonomic physiology data from 35 children ages 3 to 13
+Results  Personalized models outperformed non personalized models and achieved about 60 percent intraclass correlation agreement with human experts
+Limitations  Small dataset private therapy data possible overfitting risk affect and engagement labels depend on expert interpretation no official code found
+Code  No official GitHub found
+Source paper or record
+8.5 Egger et al. Automatic Emotion and Attention Analysis of Young Children at Home
+Population  Young children including children at autism risk
+Goal  Test scalable smartphone based home video collection for emotion and attention analysis
+Method  ResearchKit iPhone app caregivers recorded videos of children watching stimuli automated coding extracted attention and emotion measures
+Results  1,756 families participated 5,618 caregiver surveys were completed and 4,441 videos were uploaded associations were found between automatically coded emotion attention and age sex and autism risk variables
+Limitations  Convenience sample autism risk based on caregiver report and M CHAT rather than full clinical diagnosis iOS only possible confounds from other people in the scene raw videos not shared because of privacy
+Code  Available by author request for research some app components reportedly shared via GitHub but no single canonical repository link is provided in the article
+Source paper or record
+8.6 Bangerter et al. Automated Recognition of Spontaneous Facial Expression in Individuals with Autism Spectrum Disorder
+Population  Autistic children adults and typically developing controls
+Goal  Measure spontaneous positive facial expression and ASD heterogeneity
+Method  FACET CERT style automated AU analysis especially AU6 and AU12 during funny videos
+Results  ASD participants showed lower average positive facial AU activation than controls clustering found two ASD subgroups 35 over responsive participants and 89 under responsive participants
+Limitations  Exploratory analysis did not correct for all multiple comparisons unequal ASD and typically developing sample sizes reduced facial expression does not mean reduced felt emotion
+Code  No paper specific GitHub found uses FACET CERT style software rather than a released custom implementation
+Source paper or record
+8.7 Greene et al. The Spectrum of Facial Palsy The MEEI Facial Palsy Photo and Video Standard Set
+Population  Facial palsy patients
+Goal  Provide a standardized facial palsy photo video dataset and examine perceived emotion under facial palsy
+Method  Photos and videos of 60 participants clinical grading with eFACE House Brackmann and Sunnybrook scales automated emotion detection
+Results  Complete flaccid facial palsy was associated with significant loss of perceived joy moderate flaccid and nonflaccid palsy were associated with increased perceived negative emotion especially contempt
+Limitations  Dataset is small by deep learning standards automated emotion detection may reflect observer or model perception rather than actual emotion clinical population limits generalization
+Code  No exact paper code found related tools include Emotrics
+Source paper or record
+8.8 Ge et al. Automatic Facial Paralysis Estimation with Facial Action Units
+Population  Facial paralysis patients
+Goal  Estimate facial paralysis severity using facial action units
+Method  ALGRNet with adaptive region learning skip BiLSTM modeling of AU relationships and local global feature fusion evaluated on BP4D DISFA and a medically annotated facial paralysis dataset
+Results  Reported strong AU detection performance on BP4D and DISFA and demonstrated transfer to facial paralysis severity estimation
+Limitations  Clinical facial paralysis dataset is not broadly available no official implementation found subject and dataset scale remain limited
+Code  Papers With Code lists no implementation for this paper
+Source paper or record
+8.9 Gaya Morey et al. Assessing the Efficacy of Deep Learning Approaches for Facial Expression Recognition in Individuals with Intellectual Disabilities
+Population  People with intellectual disabilities
+Goal  Test whether standard FER deep learning models generalize to people with intellectual disabilities
+Method  12 CNNs trained and evaluated across standard FER datasets and MuDERI LIME used for explainability
+Results  Models trained on standard FER datasets achieved around 90 percent on typical test data but dropped below 50 percent accuracy on MuDERI models trained on MuDERI also generalized poorly to standard datasets around 40 percent for unseen users with intellectual disabilities most models stayed below 50 percent accuracy and below 30 percent F1
+Limitations  Only one public intellectual disability FER dataset found MuDERI is small class imbalanced gender imbalanced and based on 12 participants some images had suboptimal camera angle or quality
+Code  No official GitHub found
+Source paper or record
+9 Reusable Codebases for WiSense Lab
+OpenFace Best for extracting landmarks head pose eye gaze and facial action units. Useful as a baseline for disability aware facial movement sensing.
+Emotrics Best for unilateral facial paralysis measurement. Useful for clinical facial asymmetry and facial palsy feature extraction.
+YouTube Facial Palsy Database Useful public facial palsy dataset though small and opportunistic.
+BingnanHuo bp research Student and research repository using machine learning and computer vision for facial palsy severity grading. Not a canonical benchmark but useful for implementation patterns around MEEI and landmark based facial palsy work.
+10 Limitations in the Field
+Disability specific facial expression datasets are scarce small and often private which limits reproducibility and benchmarking.
+Standard facial expression recognition models generalize poorly to disabled populations and may misread facial palsy intellectual disability or autistic expressivity.
+Many systems infer emotion too directly from facial movement even though facial expression is not the same as internal emotional state.
+Disability groups are highly heterogeneous. A single model is unlikely to work equally well for autism facial palsy cerebral palsy intellectual disability and visual impairment.
+Assistive facial expression systems often lack real world accessibility evaluation. A system may classify expressions accurately but still be distracting socially awkward or unwanted by users.
+Privacy and consent are major concerns especially when collecting facial videos from children patients or disabled users.
+The code gap is itself a major limitation. Many papers use private clinical datasets commercial tools or unreleased models which makes replication difficult.
+11 Research Gaps and Opportunities
+A strong future research direction is disability aware facial expression recognition that treats facial movement as movement first and emotion inference as uncertain. Instead of asking what emotion a person is feeling the system should ask what facial movement occurred, how confident the model is and what contextual interpretation is appropriate.
+Personalized facial expression recognition models for disabled users
+Action unit based movement analysis instead of emotion only classification
+Multimodal sensing using face head pose voice physiology and context
+Datasets collected with disabled participants as collaborators
+Models that report uncertainty and avoid overclaiming emotional state
+Fairness audits across disability type severity age gender and race
+Assistive systems evaluated by disabled users in real social settings
+Privacy preserving approaches such as landmark only processing or on device inference
+Open source reproducible pipelines based on tools like OpenFace and Emotrics
+Subject exclusive evaluation protocols to avoid identity leakage
+12 References
+Astler D et al. Increased Accessibility to Nonverbal Communication through Facial and Expression Recognition Technologies for Blind Visually Impaired Subjects. ACM ASSETS 2011. Link
+Tanveer M et al. Do You See What I See Designing a Sensory Substitution Device to Access Non Verbal Modes of Communication. ACM ASSETS 2013. Link
+Jaiswal S et al. Automatic Detection of ADHD and ASD from Expressive Behaviour in RGBD Data. IEEE FG 2017. Link
+Rudovic O et al. Personalized Machine Learning for Robot Perception of Affect and Engagement in Autism Therapy. Science Robotics 2018. Link
+Egger H L et al. Automatic Emotion and Attention Analysis of Young Children at Home A ResearchKit Autism Feasibility Study. npj Digital Medicine 2018. Link
+Bangerter A et al. Automated Recognition of Spontaneous Facial Expression in Individuals with Autism Spectrum Disorder. Molecular Autism 2020. Link
+Greene J J et al. The Spectrum of Facial Palsy The MEEI Facial Palsy Photo and Video Standard Set. The Laryngoscope 2020. Link
+Ge X et al. Automatic Facial Paralysis Estimation with Facial Action Units. arXiv 2022. Link
+Gaya Morey F X et al. Assessing the Efficacy of Deep Learning Approaches for Facial Expression Recognition in Individuals with Intellectual Disabilities. Multimedia Systems 2026. Link
+Guarin D et al. Emotrics Software to Automatically Compute Facial Metrics in Unilateral Facial Paralysis. GitHub repository. Link
+Baltrusaitis T et al. OpenFace An Open Source Facial Behavior Analysis Toolkit. GitHub repository. Link
