@@ -1,0 +1,7 @@
+{
+  "google_doc_url": "https://docs.google.com/document/d/10lXMYxsNsVdvKmFM7siAxAmMAhh6yyAA6A3kx475YpY",
+  "local_download": "docs/RAVDESS_Baseline_Evaluation_Report.docx",
+  "source_results": "results/ravdess-two-actors-2026-10-22/summary.json",
+  "pages": 3,
+  "verification": "Native Google Doc readback preserved four tables and seven headings; exported PDF and local DOCX layouts visually checked."
+}
