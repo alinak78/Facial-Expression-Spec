@@ -1,0 +1,294 @@
+{
+  "input": "data/raw/ravdess/archives/Video_Speech_Actor_01.zip::Actor_01/01-01-05-02-02-02-01.mp4",
+  "input_sha256": "3b3d4b66b14dad7307f0a6ba2f5837c5c0192b9494a4ce325ea9cb42f139204f",
+  "model": "enet_b0_8_best_vgaf",
+  "model_sha256": "fa07e841fd06c7a67ee651ea4e6e4a3a2bb5695f47b37a7da50492526f59c898",
+  "model_repository_commit": "520a051c64cd191521e5934655314e769a319684",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "detector": "OpenCV frontal-face Haar cascade",
+  "sampled_frames": 11,
+  "frames_with_faces": 11,
+  "interpretation": "Expression predictions only. Softmax scores are uncalibrated. No emotion ground truth or disability diagnosis is inferred.",
+  "records": [
+    {
+      "frame_index": 0,
+      "timestamp_seconds": 0.0,
+      "faces": [
+        {
+          "bbox_xywh": [
+            344,
+            162,
+            405,
+            405
+          ],
+          "predicted_expression": "Disgust",
+          "softmax_scores": {
+            "Anger": 0.06431449949741364,
+            "Contempt": 0.14577800035476685,
+            "Disgust": 0.46154922246932983,
+            "Fear": 0.04296135902404785,
+            "Happiness": 0.18227776885032654,
+            "Neutral": 0.055478375405073166,
+            "Sadness": 0.01016155630350113,
+            "Surprise": 0.03747919201850891
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 12,
+      "timestamp_seconds": 0.40040000000000003,
+      "faces": [
+        {
+          "bbox_xywh": [
+            433,
+            162,
+            415,
+            415
+          ],
+          "predicted_expression": "Disgust",
+          "softmax_scores": {
+            "Anger": 0.10489176958799362,
+            "Contempt": 0.12027990818023682,
+            "Disgust": 0.5441502332687378,
+            "Fear": 0.03336143493652344,
+            "Happiness": 0.1359596848487854,
+            "Neutral": 0.03771606832742691,
+            "Sadness": 0.008217841386795044,
+            "Surprise": 0.015423069708049297
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 24,
+      "timestamp_seconds": 0.8008000000000001,
+      "faces": [
+        {
+          "bbox_xywh": [
+            462,
+            159,
+            394,
+            394
+          ],
+          "predicted_expression": "Anger",
+          "softmax_scores": {
+            "Anger": 0.5372033715248108,
+            "Contempt": 0.011037015356123447,
+            "Disgust": 0.38555794954299927,
+            "Fear": 0.04254751279950142,
+            "Happiness": 0.008298259228467941,
+            "Neutral": 0.007022865582257509,
+            "Sadness": 0.003267588559538126,
+            "Surprise": 0.0050654285587370396
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 36,
+      "timestamp_seconds": 1.2012,
+      "faces": [
+        {
+          "bbox_xywh": [
+            412,
+            204,
+            394,
+            394
+          ],
+          "predicted_expression": "Disgust",
+          "softmax_scores": {
+            "Anger": 0.3056422472000122,
+            "Contempt": 0.0008389161666855216,
+            "Disgust": 0.6747364401817322,
+            "Fear": 0.00941385980695486,
+            "Happiness": 0.00027087389025837183,
+            "Neutral": 0.0012122822226956487,
+            "Sadness": 0.007091023959219456,
+            "Surprise": 0.0007944077369756997
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 48,
+      "timestamp_seconds": 1.6016000000000001,
+      "faces": [
+        {
+          "bbox_xywh": [
+            422,
+            157,
+            404,
+            404
+          ],
+          "predicted_expression": "Disgust",
+          "softmax_scores": {
+            "Anger": 0.2003478854894638,
+            "Contempt": 0.004036398604512215,
+            "Disgust": 0.7731744050979614,
+            "Fear": 0.013948795385658741,
+            "Happiness": 0.000800233450718224,
+            "Neutral": 0.0022918330505490303,
+            "Sadness": 0.004012363497167826,
+            "Surprise": 0.0013881917111575603
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 60,
+      "timestamp_seconds": 2.0020000000000002,
+      "faces": [
+        {
+          "bbox_xywh": [
+            441,
+            182,
+            409,
+            409
+          ],
+          "predicted_expression": "Anger",
+          "softmax_scores": {
+            "Anger": 0.8687012791633606,
+            "Contempt": 0.00313165201805532,
+            "Disgust": 0.1068887710571289,
+            "Fear": 0.016725890338420868,
+            "Happiness": 0.00038054704782553017,
+            "Neutral": 0.0019661455880850554,
+            "Sadness": 0.001081072841770947,
+            "Surprise": 0.0011246541980654001
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 72,
+      "timestamp_seconds": 2.4024,
+      "faces": [
+        {
+          "bbox_xywh": [
+            437,
+            184,
+            417,
+            417
+          ],
+          "predicted_expression": "Anger",
+          "softmax_scores": {
+            "Anger": 0.9107450842857361,
+            "Contempt": 0.0017505207797512412,
+            "Disgust": 0.05467035993933678,
+            "Fear": 0.026103705167770386,
+            "Happiness": 0.00023095494543667883,
+            "Neutral": 0.0025482219643890858,
+            "Sadness": 0.001790970447473228,
+            "Surprise": 0.002160116797313094
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 84,
+      "timestamp_seconds": 2.8028,
+      "faces": [
+        {
+          "bbox_xywh": [
+            375,
+            207,
+            405,
+            405
+          ],
+          "predicted_expression": "Anger",
+          "softmax_scores": {
+            "Anger": 0.5711633563041687,
+            "Contempt": 0.010482965037226677,
+            "Disgust": 0.31568485498428345,
+            "Fear": 0.018401507288217545,
+            "Happiness": 0.0015487570781260729,
+            "Neutral": 0.02509172633290291,
+            "Sadness": 0.043610379099845886,
+            "Surprise": 0.014016451314091682
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 96,
+      "timestamp_seconds": 3.2032000000000003,
+      "faces": [
+        {
+          "bbox_xywh": [
+            389,
+            188,
+            405,
+            405
+          ],
+          "predicted_expression": "Anger",
+          "softmax_scores": {
+            "Anger": 0.6526365876197815,
+            "Contempt": 0.02756580337882042,
+            "Disgust": 0.14674295485019684,
+            "Fear": 0.025660285726189613,
+            "Happiness": 0.001839145552366972,
+            "Neutral": 0.05230574682354927,
+            "Sadness": 0.006801416631788015,
+            "Surprise": 0.08644811064004898
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 108,
+      "timestamp_seconds": 3.6036,
+      "faces": [
+        {
+          "bbox_xywh": [
+            443,
+            198,
+            396,
+            396
+          ],
+          "predicted_expression": "Contempt",
+          "softmax_scores": {
+            "Anger": 0.27038639783859253,
+            "Contempt": 0.3625923693180084,
+            "Disgust": 0.0608270987868309,
+            "Fear": 0.009940323419868946,
+            "Happiness": 0.024756772443652153,
+            "Neutral": 0.20950017869472504,
+            "Sadness": 0.01870344579219818,
+            "Surprise": 0.04329340532422066
+          }
+        }
+      ]
+    },
+    {
+      "frame_index": 120,
+      "timestamp_seconds": 4.0040000000000004,
+      "faces": [
+        {
+          "bbox_xywh": [
+            449,
+            191,
+            393,
+            393
+          ],
+          "predicted_expression": "Contempt",
+          "softmax_scores": {
+            "Anger": 0.19383038580417633,
+            "Contempt": 0.375787615776062,
+            "Disgust": 0.03992016986012459,
+            "Fear": 0.008953073062002659,
+            "Happiness": 0.03377167135477066,
+            "Neutral": 0.27273082733154297,
+            "Sadness": 0.01994774490594864,
+            "Surprise": 0.05505847930908203
+          }
+        }
+      ]
+    }
+  ],
+  "dataset_source": {
+    "archive": "data/raw/ravdess/archives/Video_Speech_Actor_01.zip",
+    "member": "Actor_01/01-01-05-02-02-02-01.mp4",
+    "reference_condition": "angry"
+  }
+}
